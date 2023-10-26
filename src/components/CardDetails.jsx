@@ -11,7 +11,9 @@ const CardDetails = ({ card }) => {
   const { dispatch } = useCardsContext()
   const { user } = useAuthContext()
 
-  const handleClick = async () => {
+  const handleClick = async (e) => {
+    e.target.closest('.card').classList.add('hide')
+
     if (!user) {
       return
     }

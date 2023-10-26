@@ -34,6 +34,7 @@ const Navbar = () => {
             </Typography>
             {user && (
               <div>
+                <Typography sx={{ display: 'inline', marginRight: '15px' }}>{user.email}</Typography>
                 <Button variant='outlined' onClick={handeClick} color='inherit'>
                   Logout
                 </Button>
