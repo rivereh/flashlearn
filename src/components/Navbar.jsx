@@ -34,7 +34,9 @@ const Navbar = () => {
             </Typography>
             {user && (
               <div>
-                <Typography sx={{ display: 'inline', marginRight: '15px' }}>{user.email}</Typography>
+                <Typography sx={{ display: 'inline', marginRight: '15px' }}>
+                  {user.email}
+                </Typography>
                 <Button variant='outlined' onClick={handeClick} color='inherit'>
                   Logout
                 </Button>
@@ -46,7 +48,7 @@ const Navbar = () => {
                   sx={{ marginRight: '10px' }}
                   variant='outlined'
                   component={Link}
-                  to='/flashlearn/login/'
+                  to='/login'
                   color='inherit'
                 >
                   Login
@@ -54,7 +56,7 @@ const Navbar = () => {
                 <Button
                   variant='outlined'
                   component={Link}
-                  to='/flashlearn/signup/'
+                  to='/signup'
                   color='inherit'
                 >
                   Signup

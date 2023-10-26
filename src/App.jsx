@@ -9,6 +9,7 @@ import { useAuthContext } from './hooks/useAuthContext'
 
 // pages & components
 import Home from './pages/Home'
+import Quiz from './pages/Quiz'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
@@ -23,35 +24,35 @@ function App() {
 
   return (
     <div className='App'>
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <div className='pages'>
           <Routes>
             <Route
-              path='/flashlearn/'
-              element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
-            />
-          </Routes>
-          <Routes>
-            <Route
               path='/'
-              element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
+              element={user ? <Home /> : <Navigate to='/login' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/flashlearn/login/'
-              element={!user ? <Login /> : <Navigate to='/flashlearn/' />}
+              path='/login'
+              element={!user ? <Login /> : <Navigate to='/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/flashlearn/signup/'
-              element={!user ? <Signup /> : <Navigate to='/flashlearn/' />}
+              path='/signup'
+              element={!user ? <Signup /> : <Navigate to='/' />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path='/quiz'
+              element={!user ? <Quiz /> : <Navigate to='/quiz' />}
             />
           </Routes>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }

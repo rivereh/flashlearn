@@ -7,6 +7,7 @@ import CardDetails from '../components/CardDetails'
 import CardForm from '../components/CardForm'
 
 import AddCircleIcon from '@mui/icons-material/AddCircle'
+import { Button, Link } from '@mui/material'
 
 const Home = () => {
   // const [workouts, setWorkouts] = useState(null)
@@ -48,7 +49,14 @@ const Home = () => {
           cards.map((card) => <CardDetails key={card._id} card={card} />)}
       </div>
       {showCardForm && <CardForm toggleCardForm={toggleCardForm} />}
-
+      <Button
+        component={Link}
+        to='/quiz/'
+        sx={{ width: '150px' }}
+        variant='contained'
+      >
+        Start Quiz
+      </Button>
       <AddCircleIcon
         sx={{
           position: 'fixed',

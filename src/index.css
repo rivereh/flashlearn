@@ -42,7 +42,9 @@ header a {
 
 .home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
 
 .card-details {
@@ -219,14 +221,13 @@ button:hover {
 
 .cards {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
   margin: auto;
   margin-top: 10px;
   padding: 0 10px;
   perspective: 1000px;
+  justify-content: center;
 }
 
 .card .card-delete {
