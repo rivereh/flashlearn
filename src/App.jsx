@@ -1,4 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  HashRouter,
+} from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 
 // pages & components
@@ -17,12 +23,18 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <div className='pages'>
           <Routes>
             <Route
               path='/flashlearn/'
+              element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
+            />
+          </Routes>
+          <Routes>
+            <Route
+              path='/'
               element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
             />
           </Routes>
@@ -39,7 +51,7 @@ function App() {
             />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
