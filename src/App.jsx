@@ -22,20 +22,20 @@ function App() {
         <div className='pages'>
           <Routes>
             <Route
-              path='/flashlearn/'
+              path='/flashlearn'
               element={user ? <Home /> : <Navigate to='/flashlearn/login' />}
             />
           </Routes>
           <Routes>
             <Route
               path='/flashlearn/login'
-              element={!user ? <Login /> : <Navigate to='/flashlearn/' />}
+              element={!user ? <Login /> : <Navigate to='/flashlearn' />}
             />
           </Routes>
           <Routes>
             <Route
               path='/flashlearn/signup'
-              element={!user ? <Signup /> : <Navigate to='/flashlearn/' />}
+              element={!user ? <Signup /> : <Navigate to='/flashlearn' />}
             />
           </Routes>
         </div>
