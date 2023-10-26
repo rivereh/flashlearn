@@ -1,7 +1,7 @@
 {
   "proxy": "http://54.188.89.223",
   "name": "flashlearn",
-  "homepage": "https://rivereh.github.io/flashlearn",
+  "homepage": "http://flashlearn.xyz",
   "private": true,
   "version": "0.0.0",
   "type": "module",
