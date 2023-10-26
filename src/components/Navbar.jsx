@@ -10,7 +10,6 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt'
 
-
 const Navbar = () => {
   const { logout } = useLogout()
   const { user } = useAuthContext()
@@ -46,7 +45,7 @@ const Navbar = () => {
                   sx={{ marginRight: '10px' }}
                   variant='outlined'
                   component={Link}
-                  to='/login'
+                  to='/flashlearn/login'
                   color='inherit'
                 >
                   Login
@@ -54,7 +53,7 @@ const Navbar = () => {
                 <Button
                   variant='outlined'
                   component={Link}
-                  to='/signup'
+                  to='/flashlearn/signup'
                   color='inherit'
                 >
                   Signup
