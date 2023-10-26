@@ -17,7 +17,8 @@ const CardDetails = ({ card }) => {
     }
 
     const response = await fetch(
-      'http://54.188.89.223:4000/api/cards/' + card._id,
+      'https://cors-anywhere.herokuapp.com/http://54.188.89.223:4000/api/cards/' +
+        card._id,
       {
         method: 'DELETE',
         headers: {

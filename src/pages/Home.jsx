@@ -16,11 +16,14 @@ const Home = () => {
 
   useEffect(() => {
     const fetchCards = async () => {
-      const response = await fetch('http://54.188.89.223:4000/api/cards', {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      })
+      const response = await fetch(
+        'https://cors-anywhere.herokuapp.com/http://54.188.89.223:4000/api/cards',
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      )
       const json = await response.json()
 
       if (response.ok) {
