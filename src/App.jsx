@@ -30,24 +30,24 @@ function App() {
           <Routes>
             <Route
               path='/'
-              element={user ? <Home /> : <Navigate to='/login/' />}
+              element={user ? <Home /> : <Navigate to='/login' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/login/'
+              path='/login'
               element={!user ? <Login /> : <Navigate to='/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/signup/'
+              path='/signup'
               element={!user ? <Signup /> : <Navigate to='/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/quiz/'
+              path='/quiz'
               element={!user ? <Quiz /> : <Navigate to='/' />}
             />
           </Routes>
