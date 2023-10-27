@@ -48,7 +48,7 @@ const Navbar = () => {
                   sx={{ marginRight: '10px' }}
                   variant='outlined'
                   component={Link}
-                  to='/flashlearn/login/'
+                  to='/login'
                   color='inherit'
                 >
                   Login
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <Button
                   variant='outlined'
                   component={Link}
-                  to='/flashlearn/signup/'
+                  to='/signup'
                   color='inherit'
                 >
                   Signup
