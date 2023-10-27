@@ -24,41 +24,35 @@ function App() {
 
   return (
     <div className='App'>
-      <HashRouter>
+      <BrowserRouter>
         <Navbar />
         <div className='pages'>
           <Routes>
             <Route
-              path='/flashlearn/'
-              element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
-            />
-          </Routes>
-          <Routes>
-            <Route
               path='/'
-              element={user ? <Home /> : <Navigate to='/flashlearn/login/' />}
+              element={user ? <Home /> : <Navigate to='/login/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/flashlearn/login/'
-              element={!user ? <Login /> : <Navigate to='/flashlearn/' />}
+              path='/login/'
+              element={!user ? <Login /> : <Navigate to='/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/flashlearn/signup/'
-              element={!user ? <Signup /> : <Navigate to='/flashlearn/' />}
+              path='/signup/'
+              element={!user ? <Signup /> : <Navigate to='/' />}
             />
           </Routes>
           <Routes>
             <Route
-              path='/flashlearn/quiz/'
-              element={!user ? <Quiz /> : <Navigate to='/flashlearn/' />}
+              path='/quiz/'
+              element={!user ? <Quiz /> : <Navigate to='/' />}
             />
           </Routes>
         </div>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   )
 }
