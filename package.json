@@ -1,5 +1,5 @@
 {
-  "proxy": "http://54.188.89.223",
+  "proxy": "http://54.188.89.223:4000",
   "name": "flashlearn",
   "homepage": "http://flashlearn.xyz",
   "private": true,
