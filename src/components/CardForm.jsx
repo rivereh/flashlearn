@@ -23,7 +23,7 @@ const CardForm = ({ toggleCardForm }) => {
 
     const card = { front, back }
 
-    const repsonse = await fetch('http://54.188.89.223:4000/api/cards', {
+    const repsonse = await fetch('http://54.214.110.106:4000/api/cards', {
       method: 'POST',
       body: JSON.stringify(card),
       headers: {
