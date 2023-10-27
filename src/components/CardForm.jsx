@@ -23,17 +23,14 @@ const CardForm = ({ toggleCardForm }) => {
 
     const card = { front, back }
 
-    const repsonse = await fetch(
-      'https://cors-anywhere.herokuapp.com/http://54.188.89.223:4000/api/cards',
-      {
-        method: 'POST',
-        body: JSON.stringify(card),
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${user.token}`,
-        },
-      }
-    )
+    const repsonse = await fetch('http://54.188.89.223:4000/api/cards', {
+      method: 'POST',
+      body: JSON.stringify(card),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${user.token}`,
+      },
+    })
     const json = await repsonse.json()
 
     if (!repsonse.ok) {
