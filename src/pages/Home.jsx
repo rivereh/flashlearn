@@ -17,7 +17,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchCards = async () => {
-      const response = await fetch('http://54.214.110.106:4000/api/cards/', {
+      const response = await fetch('http://54.214.110.106:4000/api/cards', {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

@@ -23,6 +23,7 @@ const CardDetails = ({ card }) => {
       {
         method: 'DELETE',
         headers: {
+          headers: { 'Content-Type': 'application/json' },
           Authorization: `Bearer ${user.token}`,
         },
       }

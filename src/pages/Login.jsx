@@ -29,7 +29,9 @@ const Login = () => {
         value={password}
       />
 
-      <Button variant='contained' onClick={handleSubmit}>Login</Button>
+      <Button variant='contained' onClick={handleSubmit}>
+        Login
+      </Button>
       {error && <div className='error'>{error}</div>}
     </form>
   )
